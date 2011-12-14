@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Example1Activity!</string>
+    <string name="app_name">FindTechnician</string>
+    <string name="main_title">Android FindTechnician Application</string>
+	<string name="find_label">search_Technician</string>
+	<string name="about_label">About</string>
+	<string name="exit_label">Exit</string>
+</resources>

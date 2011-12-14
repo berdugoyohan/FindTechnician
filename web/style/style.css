@@ -1,0 +1,18 @@
+	body {
+		background-color: #E0FFFF;
+		background-image: url("logo_findTech.gif");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: right bottom;
+		margin: 10px 20px 20px 20px;
+	}
+	h1 {
+		color: #000000		;
+		background-color: #32CD32	;
+	}
+
+	
+	#longText {
+		margin: 100px 200px 100px 100px;
+	}
+
