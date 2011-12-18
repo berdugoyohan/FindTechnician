@@ -1,36 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-	android:background="@color/backround"
-    android:padding="30dip" >   //make in the center.
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/main_title" />
-    
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/find_label" />
-    <Button 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/about_label"/>
-	<Button 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/exit_label"/>
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:background="@color/backround"
+   android:padding="30dip" >   //make in the center.
+   <LinearLayout 
+      android:orientation="horizontal" 
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:layout_gravity="center" />
+      <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginBottom="25dip"
+         android:textSize="14sp"
+         android:text="@string/main_title" />
+      <!-- <TableLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_gravity="center"
+			android:stretchColumns="*" >
+			<TableRow>
+				<Button
+					android:id="@+id/continue_button"
+					android:text="@string/continue_label" />
+				<Button
+					android:id="@+id/find_button"
+					android:text="@string/find_label" />
+				</TableRow>
+				<TableRow>
+					<Button
+						android:id="@+id/about_button"
+						android:text="@string/about_label" />
+					<Spinner
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:text="@string/exit_label" /> 
+		     </TableRow>
+		  </TableLayout> -->
+      
+      
+      
+      
+      <!-- first button -->
+     <Button
+         android:id="@+id/find_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/find_label"/>
+         
+      <!-- second button -->
+      <Spinner
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:entries="@array/list_arrays"
+         android:prompt="@string/list_prompt"
+         android:text="@string/category_label" />
+         
+      <!-- third button -->    
+     <Button
+         android:id="@+id/help_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/help_label" />
+         
+         
+	  <!-- fourth button -->
+     <Button 
+         android:id="@+id/exit_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Exit"/>
+         <!-- android:text="@string/exit_label"/ -->  <!-- dont need it anymore... -->
 
-    <RatingBar
-        android:id="@+id/ratingBar1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-        
-</LinearLayout>
+     <SeekBar
+         android:id="@+id/seekBar1"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content" />
+
+    </LinearLayout>
+ 
+		
+    

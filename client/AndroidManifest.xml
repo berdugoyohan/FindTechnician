@@ -18,6 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity 
+            android:name=".Help"
+        	android:label="@string/help_title">
+        </activity>
+        <activity
+            android:name=".Exit"
+            android:label="@string/exit_title">
+        </activity>
     </application>
 
 </manifest>

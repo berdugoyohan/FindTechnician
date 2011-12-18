@@ -4,7 +4,39 @@
     <string name="hello">Hello World, Example1Activity!</string>
     <string name="app_name">FindTechnician</string>
     <string name="main_title">Android FindTechnician Application</string>
-	<string name="find_label">search_Technician</string>
-	<string name="about_label">About</string>
+    <string name="help_title">help findTechnician</string>
+	<string name="help_text">\
+    <i>Find technician</i> is an application that help you to find technician in your environment
+    and show them on the map by click the <i>search technician</i> button.if you are encounter a 
+    problem with the application search you can visit our site on the web for further information 
+    and help
+    </string>
+    <string name="exit_title">exit the program</string>
+	<string name="exit_text">\
+	the system is exiting....
+	</string>
+	<string name="find_title">find a technician</string>
+	<string name="find_text">\
+	searching a technician..
+	</string>
+    
+    <string name="list_prompt">choose a technician </string>
+    <string-array name="list_arrays">
+        <item>plumber</item>
+        <item>electrician</item>
+        <item>locksmith</item>
+        <item>vehicle</item>
+        <item>air conditionning</item>
+        <item>computers</item>
+        <item>tv fixer</item>
+        <item>other</item>
+    </string-array> 
+	<string name="find_label">search Technician</string>
+	<string name="category_label">by category</string>
+	<string name="help_label">help</string>
 	<string name="exit_label">Exit</string>
+	
+
 </resources>
+
+
