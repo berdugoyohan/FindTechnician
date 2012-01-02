@@ -1,0 +1,15 @@
+!SESSION 2011-12-22 08:47:51.189 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_29
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=iw_IL
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Users\BEN\Desktop\Application android\workspace project\example2\example1
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-12-22 08:47:54.309
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.6.0.v201111171704r37
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2011-12-22 08:47:54.481
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.4.0.relr37v201110112027
+
+!ENTRY org.eclipse.ui 4 4 2011-12-22 08:49:46.089
+!MESSAGE Invalid preference page path: XML Syntax
