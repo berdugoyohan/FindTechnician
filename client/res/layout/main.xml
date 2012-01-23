@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--this class define the structure of the application:
+the main window of the application is  defined here and all the button
+that are use in the application are on the graphic/XML screen of this class  -->
+
 <LinearLayout 
    xmlns:android="http://schemas.android.com/apk/res/android"
    android:orientation="vertical"
    android:layout_width="fill_parent"
    android:layout_height="fill_parent"
-   android:background="@drawable/bnackground5"
+   android:background="@drawable/bnackground7"
    android:padding="30dip" >   //make in the center.
    <LinearLayout 
       android:orientation="horizontal" 
@@ -12,51 +17,32 @@
       android:layout_width="fill_parent"
       android:layout_gravity="center" />
       <TextView
+      	 android:id="@+id/myLocationText"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_gravity="center"
          android:layout_marginBottom="25dip"
          android:textSize="14sp"
          android:text="@string/main_title" />
-      
-      <!-- first button -->
+    
+    <!-- the implementation of the button on the main screen -->
+    	<!-- first button -->
      <Button
          android:id="@+id/find_button"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:text="@string/find_label"/>
-         
-      <!-- second button -->
-      <Spinner
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:entries="@array/list_arrays"
-         android:prompt="@string/list_prompt"
-         android:text="@string/category_label" />
-         
-      <!-- third button -->    
-     <Button
+         <!--second button  -->
+	 <Button
          android:id="@+id/help_button"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:text="@string/help_label" />
-         
-         
-	  <!-- fourth button -->
+       <!-- third button -->
      <Button 
          android:id="@+id/exit_button"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:text="Exit"/>
-         <!-- android:text="@string/exit_label"/ -->  <!-- don't need it anymore... -->
-
-     <SeekBar
-         android:id="@+id/seekBar1"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
- 
-		
-    
+ </LinearLayout>
+     

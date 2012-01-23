@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+
+<!-- this class is a XML file class that initialized the map and that the class that is called 
+when the application want to use the map and in this class we implement the key number
+that we got from GOOGLE and use it for a preview of the map on the EMULATOR -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
     android:layout_width="fill_parent" 
     android:layout_height="fill_parent">
  
@@ -9,20 +14,27 @@
         android:layout_height="fill_parent"
         android:enabled="true"
         android:clickable="true"
-        android:apiKey="0_R6Gc7jKnC7neV2GpMZ_DoB0DZiJG0DkUEhWaQ"
-        />
+     	android:apiKey="0_R6Gc7jKnC7neV2GpMZ_DoB0DZiJG0DkUEhWaQ" />
+  
      <LinearLayout android:id="@+id/zoom" 
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content" 
         android:layout_alignParentBottom="true" 
-        android:layout_centerHorizontal="true" 
-        /> 
- </LinearLayout>
+        android:layout_centerHorizontal="true"  />
+
+     <Button
+         android:id="@+id/locateme"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:text="Button" />
+ 
+</RelativeLayout>
 
 
+<!-- my key is :  0_R6Gc7jKnC7neV2GpMZ_DoB0DZiJG0DkUEhWaQ -->
 
-
-
-
+<!-- je c pa c a ki: 0vfpT91T1b4wyyh-f51jDMkbO5A4e923z_USwAQ -->
 
 

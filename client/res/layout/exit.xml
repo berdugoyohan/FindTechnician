@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- this class is a XML file class that initialized the exit function and button -->
+
 <ScrollView
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"

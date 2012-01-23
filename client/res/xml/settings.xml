@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- this class is setting the settings options of the setting menu of the application -->
+
 <PreferenceScreen
 	xmlns:android="http://schemas.android.com/apk/res/android" >
 <CheckBoxPreference
@@ -6,9 +9,4 @@
 	android:title="@string/music_title"
 	android:summary="@string/music_summary"
 	android:defaultValue="true" />
-<!-- <CheckBoxPreference
-	android:key="hints"
-	android:title="@string/hints_title"
-	android:summary="@string/hints_summary"
-	android:defaultValue="true" /> -->
 </PreferenceScreen>

@@ -1,46 +1,47 @@
 package org.example.Example1;
 
-//=========================================================================================
-
+/* this class is one of the most important in this project.
+ * this class is the first that are called when the application is launched
+ * and she manage the way that the application will response  
+ * */
+ //=========================================================================================
 import android.app.Activity;
-import android.media.MediaPlayer;
-import android.widget.TextView;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-
 //=========================================================================================
-
+//=========================================================================================
 public class Example1Activity extends Activity implements OnClickListener 
 {
-			//static MediaPlayer ourSong;
+			private ProgressDialog progressDialog;
+			Context context;
+			//==========================================================================================
+			//==========================================================================================
 		    @Override
 		    public void onCreate(Bundle savedInstanceState)
 		    {
 		        super.onCreate(savedInstanceState);
 		        setContentView(R.layout.main);
-		        //ourSong=MediaPlayer.create(Example1Activity.this,R.raw.asfur);
-		        //ourSong.start();
-		        
-		        // Set up click listeners for all the buttons
-		        
+		         // Set up click listeners for all the buttons
 		        View findButton = findViewById(R.id.find_button);
 		        findButton.setOnClickListener(this);
-		        View newButton = findViewById(R.id.seekBar1);
-		        newButton.setOnClickListener(this);
 		        View helpButton = findViewById(R.id.help_button);
 		        helpButton.setOnClickListener(this);
 		        View exitButton = findViewById(R.id.exit_button);
 		        exitButton.setOnClickListener(this);
-		       
-		     
-		    }
+		        progressDialog = new ProgressDialog(this);
+				context = getApplicationContext();
+		      }
 //==========================================================================================
-		    
+//==========================================================================================	    
 		    @Override
 		    public boolean onCreateOptionsMenu(Menu menu)
 		    {
@@ -49,9 +50,8 @@ public class Example1Activity extends Activity implements OnClickListener
 			    inflater.inflate(R.menu.menu, menu);
 			    return true;
 		    }
-		    
 //==========================================================================================
-		    
+//==========================================================================================	    
 		    @Override
 		    public boolean onOptionsItemSelected(MenuItem item)
 		    {
@@ -62,33 +62,34 @@ public class Example1Activity extends Activity implements OnClickListener
 				    return true;
 				    // More items go here (if any) ...
 			    }
-		    return false;
+			    	return false;
 		    }
-		    
-		    
+//==========================================================================================		    
+//==========================================================================================		    
 		    public void onClick(View v)
 		    {
 			    switch (v.getId())
 			    {
 			      //============================
 				    case R.id.help_button:
-				    Intent i = new Intent(this, Help.class);
-				    startActivity(i);
-				    break;
+				    	Intent i = new Intent(this, Help.class);
+				    	startActivity(i);
+				    	break;
 				  //============================
 				    case R.id.exit_button:
 				    //ourSong.release();
-				    finish();
-				    break;
+				    	
+				    	finish();
+				    	break;
 				  //============================
 				    case R.id.find_button:
-				    Intent g = new Intent(this, LBSActivity.class);
-				    startActivity(g);
-				    break;
+				    	LoadData();
+				    	break;
 				  //============================
-				    // More buttons go here (if any) ...
+				  // More buttons go here (if any) ...
 			    }
 		    }
+//==========================================================================================
 //==========================================================================================
 		    public class AndroidColorResources extends Activity 
 		    {
@@ -98,8 +99,40 @@ public class Example1Activity extends Activity implements OnClickListener
 		    	{
 		    		super.onCreate(savedInstanceState);
 		    		setContentView(R.layout.main);
-
-		    	
 		    	}
 		    }
+//==========================================================================================
+//==========================================================================================
+		    private void LoadData()
+		    {
+		    	progressDialog.setMessage("Loading...");
+		    	progressDialog.show();
+		    	(new AsyncTask<Void, Void, Void>() 
+				{
+		    		//==========================================================================================
+		    		@Override
+					protected Void doInBackground(Void... params) 
+					{
+						// verify if we need to load again
+						LSBCollection lsbCollection = LSBCollection.GetCurrent(context);
+						if (lsbCollection.size() == 0)
+						{ 
+							Log.e("", " reading p list");
+							lsbCollection.loadAgences(getApplicationContext());
+						}
+						return null;
+					};
+					//==========================================================================================
+					protected void onPostExecute(Void result)
+					{
+						Intent i = new Intent(Example1Activity.this,
+						LBSActivity.class);
+						startActivity(i);
+						progressDialog.dismiss();
+					}
+					//==========================================================================================
+				}).execute();
+			}
+//==========================================================================================
+//==========================================================================================
 }

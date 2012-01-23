@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- this class is setting the color of the background and his transparency -->
+
 <resources>
 	<color name = "backround" >#35f</color>
 </resources>

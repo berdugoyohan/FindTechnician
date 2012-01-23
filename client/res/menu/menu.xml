@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- this class is a XML class file that initialize the menu button settings  -->
+
 <menu
      xmlns:android="http://schemas.android.com/apk/res/android">
 	<item 

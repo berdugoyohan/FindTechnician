@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- this class is a XML file class that initialized the SearchTechician function and button -->
+
 <ScrollView
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
@@ -8,6 +11,6 @@
 	<TextView
 		android:id="@+id/find_content"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/find_text" />
+		android:layout_height="wrap_content"/>
+		<!-- android:text="@string/find_text"  -->
 </ScrollView>

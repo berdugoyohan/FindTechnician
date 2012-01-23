@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- the string XML file is the class that provide the resources for the application.
+that mean that everything that the programmer want to use have to pass here an to 
+be initialize here for be a resource in the program. --> 
+
 <resources>
 
     <string name="hello">Hello World, Example1Activity!</string>
     <string name="app_name">FindTechnician</string>
-    <string name="main_title"><b>Android FindTechnician Application</b></string>
+    <string name="main_title"></string>
    
    <!-- the help button -->
     <string name="help_title">help findTechnician</string>
@@ -18,30 +23,7 @@
     <string name="exit_title">exit the program</string>
 	<string name="exit_text">
 	</string>
-	
-	<!-- the search technician button -->
-	
-	<string name="find_title">find a technician</string>
-	<string name="find_text">\
-	The team has not succeed yet to fix the problem with the map showing.We are trying to fix it
-	and hope that we do that as soon as possible.You can visit our site for finding a technician.
-	Tank you for choosing the FindTechician application.
-	</string>
-    
-    <!-- the spinner list -->
-    <string name="list_prompt">choose a technician </string>
-    <string-array name="list_arrays">
-        <item>plumber</item>
-        <item>electrician</item>
-        <item>locksmith</item>
-        <item>vehicle</item>
-        <item>air conditionning</item>
-        <item>computers</item>
-        <item>tv fixer</item>
-        <item>other</item>
-    </string-array> 
-    
-	<string name="find_label">search Technician</string>
+	 <string name="find_label">search Technician</string>
 	<string name="category_label">by category</string>
 	<string name="help_label">help</string>
 	<string name="exit_label">Exit</string>
@@ -52,7 +34,8 @@
 	<string name="music_title">Music</string>
 	<string name="music_summary">Play background music</string>
 
-
+<string name="technicien">technicien</string>
 </resources>
 
 
+<!-- <b>Android FindTechnician Application</b> -->

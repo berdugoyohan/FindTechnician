@@ -1,5 +1,7 @@
 package org.example.Example1;
 
+/*this class make an OnCreate for the Exit button that will exit the application*/
+
 import android.app.Activity;
 import android.os.Bundle;
 
